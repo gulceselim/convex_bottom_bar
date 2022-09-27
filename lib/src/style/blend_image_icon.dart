@@ -37,20 +37,19 @@ class BlendImageIcon<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var s = size ?? IconTheme.of(context).size;
     if (image is Widget) {
       // flutter web do not support shader mask. (flutter v1.12.x)
       var showRawImage = kIsWeb || color == null;
       if (showRawImage) {
         return SizedBox(
-          width: s,
-          height: s,
+          width: size,
+          height: size,
           child: image as Widget,
         );
       }
       return SizedBox(
-        width: s,
-        height: s,
+        width: size,
+        height: size,
         child: ShaderMask(
           shaderCallback: (Rect bounds) {
             return LinearGradient(colors: [color!, color!])
@@ -61,6 +60,6 @@ class BlendImageIcon<T> extends StatelessWidget {
         ),
       );
     }
-    return Icon(image as IconData, size: s, color: color);
+    return Icon(image as IconData, size: size, color: color);
   }
 }
