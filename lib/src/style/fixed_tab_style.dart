@@ -62,7 +62,7 @@ class FixedTabStyle extends InnerBuilder {
     var noLabel = style.hideEmptyLabel && hasNoText(item);
     var icon = BlendImageIcon(
       active ? item.activeIcon ?? item.icon : item.icon,
-      size: 32,
+      size: 28,
       color: item.blend ? (c) : null,
     );
     var children = noLabel
