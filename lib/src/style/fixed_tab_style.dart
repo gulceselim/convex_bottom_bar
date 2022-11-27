@@ -50,7 +50,7 @@ class FixedTabStyle extends InnerBuilder {
             BlendImageIcon(
               active ? item.activeIcon ?? item.icon : item.icon,
               color: item.blend ? (c) : null,
-              size: 40,
+              size: index == 2 ? 50 : 40,
             ),
             SizedBox(height: 8),
             Text(item.title ?? '', style: textStyle)
