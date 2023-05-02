@@ -70,7 +70,7 @@ class FixedTabStyle extends InnerBuilder {
         : <Widget>[
             icon,
             SizedBox(height: 3),
-            Text(item.title ?? '', style: textStyle)
+            Text(item.title ?? '', style: textStyle.copyWith(fontSize: 14))
           ];
     return Container(
       padding: EdgeInsets.only(bottom: 2),
