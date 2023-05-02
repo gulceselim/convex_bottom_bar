@@ -53,7 +53,7 @@ class FixedTabStyle extends InnerBuilder {
               size: index == 2 ? 46 : 40,
             ),
             SizedBox(height: 8),
-            Text(item.title ?? '', style: textStyle)
+            Text(item.title ?? '', style: textStyle.copyWith(fontSize: 10))
           ],
         ),
       );
